@@ -1,17 +1,17 @@
 {
-  "name": "json-vs-msgpack",
-  "version": "0.0.1",
-  "description": "Benchmark: JSON vs. msgpack (node.js)",
-  "author": "Christoph Schulz",
-  "dependencies": {
-	"msgpack": "0.2.1",
-    "msgpack-js": "0.3.0",
-	"msgpack-js-v5": "0.3.0-v5",
-	"purepack": "1.0.0"
-  },
-  "engines": {
-    "node": ">=0.10.x"
-  },
-  "license": "MIT",
-  "private": true
+	"name": "json-vs-msgpack",
+	"version": "0.0.1",
+	"description": "Benchmark: JSON vs. msgpack (node.js)",
+	"author": "Christoph Schulz",
+	"dependencies": {
+		"msgpack": "0.2.1",
+		"msgpack-js": "0.3.0",
+		"msgpack-js-v5": "0.3.0-v5",
+		"purepack": "1.0.0"
+	},
+	"engines": {
+		"node": ">=0.10.x"
+	},
+	"license": "MIT",
+	"private": true
 }
