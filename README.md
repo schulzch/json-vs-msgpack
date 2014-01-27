@@ -32,9 +32,12 @@ purepack | 313ms | 513% | 332809 bytes | 69% | 203781 bytes | 86%
 
 ## Worth mentioning
 
-- msgpack seems to be more space efficient
-- V8's JSON parsing and formatting **is optimized**
+- JSON will hurt floating point precision
+- msgpack is more space efficient
+- V8's JSON parsing and formatting is optimized, **a lot**
 - JavaScript msgpack implementations are slow (even when using typed arrays, asm.js might be worth a try)
 - node-msgpack seems to do something wrong (compare many calls vs. large object, might be an allocation strategy problem)
-- compressing JSON might do the trick, if Gzip doesn't add a huge performance penality
+- compressing JSON (HTTP header or WebSocket extension) might do the trick, if timewise
+  - `JSON + Gzip - gained transmission time < JSON`
+  - `JSON + Gzip < msgpack`
 - Your use case isn't likely to match mine (think about it, really!)
