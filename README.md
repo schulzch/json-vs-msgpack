@@ -41,3 +41,11 @@ purepack | 313ms | 513% | 332809 bytes | 69% | 203781 bytes | 86%
   - `JSON + Gzip - gained transmission time < JSON`
   - `JSON + Gzip < msgpack`
 - Your use case isn't likely to match mine (think about it, really!)
+
+Update:
+- V8's native JSON has a clever strategy to prevent allocations
+- `Array` and `Object` are higher level types, so they inherit the complexity of their content
+- `Boolean`, `Number`, `undefined` and `null` can be written directly to `ArrayBufferView` (no big deal)
+- `String` has to be transformed to `Uint16Array` (no big deal) and back (big deal)
+    - See `string-buffer.coffee` (100,000 roundtrips on `Hello World!`: 28ms vs. 41ms)
+    - JavaScript has no real means of pre-allocating strings, thus we can only get close to V8's native JSON
