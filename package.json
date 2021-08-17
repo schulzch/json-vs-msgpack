@@ -4,10 +4,10 @@
 	"description": "Benchmark: JSON vs. msgpack (node.js)",
 	"author": "Christoph Schulz",
 	"dependencies": {
-		"msgpack": "0.2.1",
+		"msgpack": "1.0.3",
 		"msgpack-js": "0.3.0",
 		"msgpack-js-v5": "0.3.0-v5",
-		"purepack": "1.0.0"
+		"purepack": "1.0.6"
 	},
 	"engines": {
 		"node": ">=0.10.x"
